@@ -1,0 +1,37 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nume = trim($_POST["nume"] ?? '');
+    $email = trim($_POST["email"] ?? '');
+    $telefon = trim($_POST["telefon"] ?? '');
+    $serviciu = trim($_POST["serviciu"] ?? '');
+    $mesaj = trim($_POST["mesaj"] ?? '');
+
+    // Validare simplă
+    if (!empty($nume) && !empty($email) && !empty($mesaj)) {
+        $to = "contact@firma-ta.md"; // Adresa ta de email
+        $subject = "Cerere serviciu: $serviciu";
+
+        $body = "<strong>Nume:</strong> $nume<br>";
+        $body .= "<strong>Email:</strong> $email<br>";
+        if (!empty($telefon)) {
+            $body .= "<strong>Telefon:</strong> $telefon<br>";
+        }
+        $body .= "<strong>Serviciu necesar:</strong> $serviciu<br><br>";
+        $body .= "<strong>Mesaj:</strong><br>" . nl2br($mesaj);
+
+        $headers = "From: $email\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Mesajul tău a fost trimis cu succes!";
+        } else {
+            echo "Ne pare rău, dar mesajul tău nu a putut fi trimis.";
+        }
+    } else {
+        echo "Te rugăm să completezi toate câmpurile obligatorii.";
+    }
+} else {
+    echo "Ceva nu a mers bine, încearcă din nou.";
+}
+?>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameliorated PC Repairs | Reparații PC & Upgrade Hardware</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e3a8a 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #10b981;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header & Navigation -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-laptop-code text-3xl text-green-400"></i>
+                    <h1 class="text-2xl font-bold">Ameliorated PC Repairs<span class="text-green-400">.</span></h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-green-400">Acasă</a>
+                    <a href="#services" class="nav-link text-white hover:text-green-400">Servicii</a>
+                    <a href="#about" class="nav-link text-white hover:text-green-400">Despre mine</a>
+                    <a href="#testimonials" class="nav-link text-white hover:text-green-400">Recenzii</a>
+                    <a href="#contact" class="nav-link text-white hover:text-green-400">Contact</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-white hover:text-green-400">Acasă</a>
+                <a href="#services" class="block py-2 text-white hover:text-green-400">Servicii</a>
+                <a href="#about" class="block py-2 text-white hover:text-green-400">Despre mine</a>
+                <a href="#testimonials" class="block py-2 text-white hover:text-green-400">Recenzii</a>
+                <a href="#contact" class="block py-2 text-white hover:text-green-400">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Soluții IT personalizate pentru nevoile dumneavoastră</h2>
+                <p class="text-xl mb-8 text-gray-200">"Performanță. Fiabilitate. Încredere. - Calculatorul dumneavoastră în mâini de specialiști"</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contactează-mă</a>
+                    <a href="#services" class="border border-white hover:bg-white hover:text-blue-900 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Serviciile mele</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="IT Specialist" class="rounded-lg shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Serviciile mele</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ofer soluții complete pentru toate nevoile dumneavoastră IT, de la reparații simple la sisteme complexe personalizate.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-900">Reparații PC</h3>
+                    <p class="text-gray-600 mb-4">Diagnosticare și remediere rapidă a problemelor hardware și software, inclusiv înlocuire componentelor defecte și reinstalare sistem de operare.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Diagnosticare gratuită</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Reparații în maxim 24h</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Garantie servicii</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-microchip text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-900">Upgrade Hardware</h3>
+                    <p class="text-gray-600 mb-4">Modernizare sistem pentru performanță superioară: upgrade RAM, SSD, plăci video și procesoare, cu recomandări personalizate.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Analiză compatibilitate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Optimizare buget</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Testare post-upgrade</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-broom text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-900">Curățare Internă</h3>
+                    <p class="text-gray-600 mb-4">Eliminare praf și particule care afectează răcirea și performanța, cu înlocuire paste termice și optimizare sistem de răcire.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Curățare profesională</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Înlocuire paste termice</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Verificare ventiloare</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-900 mb-4">
+                        <i class="fas fa-desktop text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-900">Asamblare PC</h3>
+                    <p class="text-gray-600 mb-4">Construcție sistem personalizat de la zero, optimizat pentru gaming, muncă sau uz general, cu componente de calitate premium.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Consultanță componentă</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Asamblare profesională</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Testare extinsă</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="IT Specialist" class="rounded-lg shadow-xl w-full max-w-xs border-4 border-white">
+                        <div class="absolute -bottom-5 -right-5 bg-blue-900 text-white p-4 rounded-lg shadow-lg">
+                            <p class="font-bold">UTM</p>
+                            <p class="text-sm">Masterand</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-900">Despre mine</h2>
+                    <p class="text-gray-600 mb-6">Sunt un tânăr pasionat de tehnologie și soluții IT, dedicat oferirii de servicii de calitate superioară clienților mei. Cu o abordare meticuloasă și atenție la detalii, mă asigur că fiecare sistem pe care îl ating funcționează la cel mai înalt nivel.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-900">Educație și calificări</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-graduation-cap text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Universitatea Tehnică a Moldovei</h4>
+                                    <p class="text-gray-600">Master în Tehnologii Informaționale (2025-prezent)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-500 rounded-full p-2 mr-4 mt-1">
+                                    <i class="fas fa-certificate text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Universitatea Tehnică a Moldovei</h4>
+                                    <p class="text-gray-600">Licență în Tehnologii Informaționale (2021-2025)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-blue-900">Motivație profesională</h3>
+                        <p class="text-gray-600 mb-4">Îmi doresc să avansez în carieră și să câștig experiență practică în domeniul IT, oferind soluții tehnice de calitate. Fiecare proiect reprezintă o oportunitate de învățare și de a-mi îmbunătăți abilitățile.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Hardware</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Optimizare</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Soluții personalizate</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Performanță</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Recenzii clienți</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Părerea clienților mei este cea mai importantă măsură a succesului meu.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold">A</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Oleg Garbuz</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Am fost impresionat de profesionalismul și viteza cu care mi-a rezolvat problema cu laptopul. Diagnosticul a fost precis, iar reparația a fost făcută în mai puțin de o zi. Recomand cu încredere!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold">M</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ion Moraru</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Mi-a asamblat un PC de gaming exact cum îmi doream, cu recomandări excelente pentru componente. Sistemul funcționează perfect și am primit și sfaturi pentru întreținere. Serviciul a depășit așteptările!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-900 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold">V</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Cogilniceanu Alexandru</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"După upgrade-ul făcut de el, calculatorul meu vechi de 5 ani funcționează ca nou. A explicat tot procesul și a oferit mai multe opțiuni adaptate bugetului meu. Servicii de calitate la prețuri corecte."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Contactează-mă</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ai nevoie de ajutor cu echipamentul tău IT? Lasă-mi un mesaj și voi răspunde în cel mai scurt timp posibil.</p>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nume</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefon (opțional)</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Serviciu necesar</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Selectați un serviciu</option>
+                                <option value="reparatii">Reparații PC</option>
+                                <option value="upgrade">Upgrade Hardware</option>
+                                <option value="curatare">Curățare Internă</option>
+                                <option value="asamblare">Asamblare PC</option>
+                                <option value="altul">Alt serviciu</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mesaj</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Trimite mesaj</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-6 text-blue-900">Date de contact</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <a href="mailto:ameliorated650@gmail.com" class="text-gray-600 hover:text-blue-900">ameliorated650@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Telefon</h4>
+                                    <a href="tel:062093483" class="text-gray-600 hover:text-blue-900">062093483</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">WhatsApp</h4>
+                                    <a href="https://wa.me/+37362093483" target="_blank" class="text-gray-600 hover:text-blue-900">Trimite mesaj pe WhatsApp</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-900 rounded-full p-3 mr-4">
+                                    <i class="fab fa-viber"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">Viber</h4>
+                                    <a href="viber://add?number=+37362093483" class="text-gray-600 hover:text-blue-900">Contact pe Viber</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-semibold mb-4 text-blue-900">Program de lucru</h4>
+                            <div class="space-y-2 text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>Luni - Vineri</span>
+                                    <span>09:00 - 17:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Sâmbătă</span>
+                                    <span>10:00 - 15:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Duminică</span>
+                                    <span>Închis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-laptop-code text-3xl text-green-400"></i>
+                        <h2 class="text-2xl font-bold">Ameliorated PC Repairs<span class="text-green-400">.</span></h2>
+                    </div>
+                    <p class="mt-2 text-gray-300">Soluții IT complete și personalizate</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="viber://add?number=+37362093483" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-viber text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/+37362093483" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="mailto:ameliorated650@gmail.com" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">© 2025 Ameliorated PC Repairs. Toate drepturile rezervate.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">Termeni și condiții</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition duration-300">Politică de confidențialitate</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Mesajul dumneavoastră a fost trimis cu succes! Vă voi contacta în cel mai scurt timp posibil.');
+            
+            // Reset the form
+            contactForm.reset();
+        });
+        
+        // Change navbar style on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Ameliorated/amelioratedpcrepair-md" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
